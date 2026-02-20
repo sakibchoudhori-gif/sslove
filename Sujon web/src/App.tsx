@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Heart, Stars, Camera, Calendar, Sparkles, Music, Music2, Gift } from 'lucide-react';
+import { Heart, Stars, Calendar, Sparkles, Music, Music2, Gift } from 'lucide-react';
 
 // --- Components ---
 
@@ -14,7 +14,7 @@ const LoveRain = () => {
       left: `${Math.random() * 100}%`,
       size: Math.random() * 18 + 6,
       duration: Math.random() * 6 + 4,
-      delay: Math.random() * 10 - 5, // Some start immediately or even "before"
+      delay: Math.random() * 10 - 5,
       color: colors[Math.floor(Math.random() * colors.length)],
       opacity: Math.random() * 0.7 + 0.3,
       xOffset: Math.random() * 100 - 50,
@@ -102,7 +102,7 @@ export default function App() {
       <LoveRain />
       <div className="bg-blur-vibe" />
       
-      {/* Music Toggle (Simulated) */}
+      {/* Music Toggle */}
       <button 
         onClick={() => setIsPlaying(!isPlaying)}
         className="fixed top-6 right-6 z-50 p-3 bg-white/80 backdrop-blur-md rounded-full shadow-lg border border-pink-100 text-rose-500 hover:scale-110 transition-transform"
@@ -132,10 +132,10 @@ export default function App() {
           
           <div className="space-y-4">
             <p className="text-2xl md:text-3xl font-cursive text-rose-400 italic">
-              আমার প্রিয় সালমা,
+              আমার প্রিয় সালমা,
             </p>
             <p className="text-xl md:text-2xl font-serif text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি। তোমার হাসিতেই আমার পৃথিবী পূর্ণতা পায়। <br />
+              তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি। তোমার হাসিতেই আমার পৃথিবী পূর্ণতা পায়। <br />
               <span className="text-rose-400">Every moment with you feels like a dream I never want to wake up from. 🌸</span>
             </p>
           </div>
@@ -167,9 +167,9 @@ export default function App() {
               <Stars className="w-6 h-6 text-white" />
             </div>
             
-            <h2 className="text-3xl font-serif font-bold text-rose-600 mb-6">প্রিয় সালমা,</h2>
+            <h2 className="text-3xl font-serif font-bold text-rose-600 mb-6">প্রিয় সালমা,</h2>
             <p className="text-xl md:text-2xl leading-relaxed text-slate-700 font-serif italic">
-              "তোমার চোখের মায়ায় আমি নিজেকে হারিয়ে ফেলি। তুমি শুধু আমার ভালোবাসা নও, তুমি আমার বেঁচে থাকার কারণ। <br />
+              "তোমার চোখের মায়ায় আমি নিজেকে হারিয়ে ফেলি। তুমি শুধু আমার ভালোবাসা নও, তুমি আমার বেঁচে থাকার কারণ। <br />
               আমি কথা দিচ্ছি, জীবনের শেষ নিঃশ্বাস পর্যন্ত তোমার হাতটি ধরে রাখবো। <br />
               I promise to love you today, tomorrow, and forever. ♾️"
             </p>
@@ -187,10 +187,10 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { text: "তোমার ওই মায়াবী হাসি", icon: "💗", sub: "Your magical smile" },
+              { text: "তোমার ওই মায়াবী হাসি", icon: "💗", sub: "Your magical smile" },
               { text: "তোমার পবিত্র ও সরল মন", icon: "🌸", sub: "Your pure and simple heart" },
               { text: "আমার প্রতি তোমার নিঃস্বার্থ যত্ন", icon: "💞", sub: "Your selfless care for me" },
-              { text: "তোমার চোখের গভীরে খুঁজে পাওয়া প্রশান্তি", icon: "✨", sub: "Peace found deep in your eyes" },
+              { text: "তোমার চোখের গভীরে খুঁজে পাওয়া প্রশান্তি", icon: "✨", sub: "Peace found deep in your eyes" },
               { text: "তুমি আমার জীবনের শ্রেষ্ঠ বন্ধু ও আত্মার সাথী", icon: "❤️", sub: "My best friend & soulmate" }
             ].map((item, i) => (
               <motion.div
@@ -211,49 +211,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* Memories Section */}
-      <section className="py-24 px-6 bg-rose-50/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <div className="flex justify-center gap-2 text-rose-400">
-              <Camera className="w-6 h-6" />
-            </div>
-            <h2 className="text-4xl font-serif font-bold text-rose-600">📸 স্মৃতিগুলো (Memories)</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto italic">
-              আমাদের প্রতিটি মুহূর্ত আমার হৃদয়ের মণিকোঠায় যত্ন করে রাখা আছে। <br />
-              তোমার সাথে কাটানো প্রতিটি সেকেন্ড আমার জীবনের শ্রেষ্ঠ উপহার।
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((id) => (
-              <motion.div
-                key={id}
-                whileHover={{ y: -10 }}
-                className="bg-white p-4 rounded-xl shadow-lg border border-rose-50 transform rotate-1 hover:rotate-0 transition-all"
-              >
-                <div className="aspect-[4/5] bg-rose-100 rounded-lg overflow-hidden relative group">
-                  <img 
-                    src={`https://picsum.photos/seed/love-${id}/800/1000`} 
-                    alt="Memory" 
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Heart className="w-12 h-12 text-white/50 group-hover:scale-150 transition-transform" />
-                  </div>
-                </div>
-                <p className="mt-4 text-center font-cursive text-xl text-rose-500">
-                  {id === 1 ? "First Date ✨" : id === 2 ? "Beautiful Moments 🌸" : "Forever Together ❤️"}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Relationship Duration Section */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 bg-rose-50/30">
         <div className="max-w-2xl mx-auto text-center space-y-10">
           <div className="space-y-2">
             <Calendar className="w-8 h-8 text-rose-400 mx-auto" />
@@ -264,20 +223,20 @@ export default function App() {
         </div>
       </section>
 
-      {/* Heartfelt Promises Section */}
+      {/* Heartfelt Quotes Section */}
       <section className="py-24 px-6 bg-white/40">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-rose-600">💌 হৃদয়ের কিছু কথা</h2>
+            <h2 className="text-4xl font-serif font-bold text-rose-600">💌 হৃদয়ের কিছু কথা</h2>
             <p className="text-rose-400 italic mt-2">Heartfelt Words for You</p>
           </div>
           
           <div className="space-y-8">
             {[
               "তুমি আমার সেই স্বপ্ন, যা আমি প্রতি রাতে দেখি এবং প্রতি সকালে সত্যি হিসেবে পেতে চাই।",
-              "হাজারো মানুষের ভিড়ে আমার চোখ শুধু তোমাকেই খুঁজে বেড়ায়, কারণ তুমিই আমার প্রশান্তি।",
-              "ভালোবাসা মানে শুধু হাত ধরা নয়, ভালোবাসা মানে সারাজীবন ছায়ার মতো পাশে থাকা।",
-              "তোমার হাসিতেই আমার বসন্ত আসে, আর তোমার অভিমানে আমার আকাশ মেঘলা হয়।",
+              "হাজারো মানুষের ভিড়ে আমার চোখ শুধু তোমাকেই খুঁজে বেড়ায়, কারণ তুমিই আমার প্রশান্তি।",
+              "ভালোবাসা মানে শুধু হাত ধরা নয়, ভালোবাসা মানে সারাজীবন ছায়ার মতো পাশে থাকা।",
+              "তোমার হাসিতেই আমার বসন্ত আসে, আর তোমার অভিমানে আমার আকাশ মেঘলা হয়।",
               "পৃথিবীর সব সুখ একদিকে, আর তোমার পাশে এক মুহূর্ত কাটানো অন্য দিকে।"
             ].map((quote, idx) => (
               <motion.div
@@ -310,7 +269,7 @@ export default function App() {
             </h2>
             <p className="text-2xl md:text-3xl font-cursive text-rose-500 italic">
               আমি আমার প্রতিটি সকাল তোমার মুখ দেখে শুরু করতে চাই। <br />
-              তুমি কি সারাজীবন আমার হয়ে থাকবে? 💖
+              তুমি কি সারাজীবন আমার হয়ে থাকবে? 💖
             </p>
           </motion.div>
 
@@ -320,23 +279,23 @@ export default function App() {
               whileTap={{ scale: 0.9 }}
               onClick={() => {
                 setGiftMessage({
-                  title: "প্রিয় সালমা,",
-                  body: "তুমিই আমার জীবনের শ্রেষ্ঠ উপহার। আমার পৃথিবীটা তোমার ভালোবাসায় পূর্ণ। আই লাভ ইউ সো মাচ! ❤️"
+                  title: "প্রিয় সালমা,",
+                  body: "তুমিই আমার জীবনের শ্রেষ্ঠ উপহার। আমার পৃথিবীটা তোমার ভালোবাসায় পূর্ণ। আই লাভ ইউ সো মাচ! ❤️"
                 });
                 setShowGift(true);
                 setIsGiftOpened(false);
               }}
               className="px-12 py-4 bg-rose-500 text-white rounded-2xl font-bold text-xl shadow-xl shadow-rose-200 hover:bg-rose-600 transition-all flex flex-col items-center"
             >
-              <span className="text-sm font-normal opacity-90 mb-1">হ্যাঁ, সারাজীবন তোমার হয়েই থাকবো</span>
+              <span className="text-sm font-normal opacity-90 mb-1">হ্যাঁ, সারাজীবন তোমার হয়েই থাকবো</span>
               Yes, Forever! 💍
             </motion.button>
             <motion.button
               whileHover={{ x: [0, 10, -10, 10, 0] }}
               onClick={() => {
                 setGiftMessage({
-                  title: "আমার প্রিয়তমা সালমা,",
-                  body: "তোমার হাসিতেই আমার পৃথিবী আলোকিত হয়। সারাজীবন এভাবেই আমার পাশে থেকো। তোমাকে অনেক ভালোবাসি! 🌸"
+                  title: "আমার প্রিয়তমা সালমা,",
+                  body: "তোমার হাসিতেই আমার পৃথিবী আলোকিত হয়। সারাজীবন এভাবেই আমার পাশে থেকো। তোমাকে অনেক ভালোবাসি! 🌸"
                 });
                 setShowGift(true);
                 setIsGiftOpened(false);
@@ -359,7 +318,7 @@ export default function App() {
             <Heart className="w-5 h-5 fill-current" />
           </div>
           <p className="text-rose-600 font-medium tracking-wide">
-            সুজনের হৃদয়ের সবটুকু ভালোবাসা দিয়ে শুধু তোমার জন্য ❤️
+            সুজনের হৃদয়ের সবটুকু ভালোবাসা দিয়ে শুধু তোমার জন্য ❤️
           </p>
           <p className="text-rose-400 text-sm font-serif italic">
             For My Queen <span className="font-bold not-italic">Salma</span> 👑
@@ -369,6 +328,7 @@ export default function App() {
           </div>
         </div>
       </footer>
+
       {/* Gift Modal */}
       <AnimatePresence>
         {showGift && (
